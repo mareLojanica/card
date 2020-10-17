@@ -114,12 +114,9 @@ const AllCards = {
 const editCardComponent = {
   render: (param,data) => {
       let id = parseInt(param);
-      console.log(data, id)
       for(let card of data){
           if (card.id == id){
-               return  renderEdit(card)
-          } else {
-              return `invalid card id`
+                return renderEdit(card)
           }
       }
   }
@@ -128,7 +125,6 @@ const editCardComponent = {
 const ErrorComponent = {
     
   render: (param) => {
-      console.log('akldsfjklsdafj')
     return `
       <section>
         <h1>Error</h1>
